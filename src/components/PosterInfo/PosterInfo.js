@@ -22,6 +22,7 @@ class PosterInfo extends Component {
                 });
 
                 //go through promises and async
+
             //     axios.get('1').then(get('2')).then(get('3')).catch(console.log(err))
 
             //     axios.get('1', function() => { 
