@@ -1,0 +1,7 @@
+.MoviePosters{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    background-color: #fff;
+    color: #444;
+    padding-top: 90px;
+}
