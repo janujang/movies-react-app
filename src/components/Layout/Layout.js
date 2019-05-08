@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import MoviePoster from '../MoviePosters/MovePoster/MoviePoster';
-import MoviePosters from '../MoviePosters/MoviePosters';
-import classes from './Layout.module.css';
-import MoviePosterInfo from '../MoviePosterInfo/MoviePosterInfo';
-import {Route, Link, NavLink, Switch} from 'react-router-dom';
+import Posters from '../Posters/Posters';
+import PosterInfo from '../PosterInfo/PosterInfo';
+import {Route, Switch} from 'react-router-dom';
+import Toolbar from '../Navigation/Toolbar/Toolbar';
 
 
 
@@ -12,17 +11,10 @@ class Layout extends Component {
     render(){
         return (
             <div>
-                <div className={classes.Toolbar}>
-                    <strong>Latest Movies</strong>
-                    <nav>
-                        <ul>
-                            <li><Link to='/movies'>Movies</Link></li>
-                        </ul>
-                    </nav>
-                </div>
+                {/*<Toolbar/>*/}
                 <Switch>
-                    <Route path="/movies" exact component={MoviePosters}/>
-                    <Route path="/movies/:id" component={MoviePosterInfo} />
+                    <Route path="/" exact component={Posters}/>
+                    <Route path="/movies/:id" component={PosterInfo} />
                 </Switch>
                 
             </div>
