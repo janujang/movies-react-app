@@ -5,7 +5,7 @@ import { Dropdown } from 'react-bootstrap';
 
 
 const toolbar = props => {
-    let attachedClasses = [classes.Toolbar, classes.NoButton];
+    const attachedClasses = [classes.Toolbar, classes.NoButton];
     let content = (
         <div>
         <div className={attachedClasses.join(' ')}>
@@ -14,7 +14,7 @@ const toolbar = props => {
                     <ul>
                         <li><Link to='/' exact>Popular</Link></li>
                         <li><Link to='/toprated' exact>Top Rated</Link></li>
-                        <li><Link to='/nowplayimg' exact>Now Playing</Link></li>
+                        <li><Link to='/nowplaying' exact>Now Playing</Link></li>
                     </ul>
                 </nav>
         </div>

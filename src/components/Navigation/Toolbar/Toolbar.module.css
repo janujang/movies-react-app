@@ -31,7 +31,6 @@
 }
 
 .Toolbar a:hover,
-.Toolbar a:active,
-.Toolbar a.active {
+.Toolbar a:active {
     color: #fa923f;
 }

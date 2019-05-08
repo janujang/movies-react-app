@@ -17,20 +17,42 @@ class PosterInfo extends Component {
                 .then(response => {
                     console.log(response.data)
                     this.setState({loadedMovie: response.data});
+                }).catch(error => {
+
                 });
+
+                //go through promises and async
+            //     axios.get('1').then(get('2')).then(get('3')).catch(console.log(err))
+
+            //     axios.get('1', function() => { 
+            //         axios.get('2', function() {
+            //             axios.get('3', function() {}, function(){fdsfdsfdsf}
+            //         }, function(fdsfdsfds))
+            //     }, function() => {fdsfdsf})
+
+            //     async function() {
+            //     try {
+            //         await axios.get(1)
+            //         await axios.get(2)
+            //         await axios.get(3)
+            //     } catch(error)
             }
            
         }
     }
-    render(){
+    render() {
         let content = null;
-        
+        // const [element1, element2] = [1,2]
+        // const {element1, element2} = {element1: 1, element2: 2}
+        // const foo = {element1: 1, element2: 2}
+        // const {element1, element2} = foo
+
         if (this.props.match.params.id){
             content = null;
         }
         //check due to asynchronous nature
-        if (this.state.loadedMovie)
-        {
+        const { loadedMovie } = this.state
+        if (loadedMovie) {
             content = (
                 <div className={classes.PosterInfo}>
                     <h1>{this.state.loadedMovie.title}</h1>   
