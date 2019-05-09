@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import classes from './PosterInfo.module.css'
 import axios from 'axios';
 import Toolbar from '../Navigation/Toolbar/Toolbar';
+import {VideoPlayer} from "@we.org/shared-component-library";
 
 
 class PosterInfo extends Component {
@@ -87,6 +88,7 @@ class PosterInfo extends Component {
                         <h2>Trailers:</h2> 
                         <ul>
                             <li>Trailer 1</li>
+                            <VideoPlayer title="Logic" videoId="123123" />
                             <li>Trailer 2</li>
                         </ul>
                         <hr/>

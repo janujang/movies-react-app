@@ -1,0 +1,14 @@
+@mixin add-image-hover-effect($imageWrapperClass) {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+    .#{$imageWrapperClass} > img {
+        transition: all 0.3s ease-in;
+    }
+
+    &:hover .#{$imageWrapperClass} > img {
+        transform: scale(1.03);
+    }
+}

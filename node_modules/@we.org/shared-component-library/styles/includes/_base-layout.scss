@@ -1,0 +1,100 @@
+@import "./media-queries";
+@import "./variables";
+
+.block, .block-fluid, .container, .container-fluid {
+    // Fallbacks.
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: hidden;
+};
+
+.block, .container {
+    // Breakpoints and Container sizing
+    @include default-container-widths();
+}
+
+.block-fluid, .container-fluid {
+    max-width: 100vw;
+    width: 100%;
+}
+
+%base-col {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    padding-left: map-get($gutters, xs) / 2;
+    padding-right: map-get($gutters, xs) / 2;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    @include gt(md) {
+        padding-right: map-get($gutters, md) / 2;
+        padding-left: map-get($gutters, md) / 2;
+    }
+    @include gt(lg) {
+        padding-right: map-get($gutters, lg) / 2;
+        padding-left: map-get($gutters, lg) / 2;
+    }
+    @include gt(xl) {
+        padding-right: map-get($gutters, xl) / 2;
+        padding-left: map-get($gutters, xl) / 2;
+    }
+}
+
+
+// Removes outer padding for a single column
+// Only usable for xs-12 below sm.
+.bleed {
+    &.col-xs-12 {
+        @media screen and (max-width: map-get($breakpoints, sm)){
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+
+@mixin create-column-classes() {
+    $ot: 100% / 12;
+    @for $k from 1 through 12 {
+        // Offset
+        .col-xs-offset-#{$k} {
+            margin-left: $ot * $k;
+        }
+
+        // Column
+       .col-xs-#{$k} {
+            @extend %base-col;
+            flex: 0 1 $ot * $k;
+        }
+    }
+
+    .col-xs-offset-0 {
+        margin-left: 0;
+    }
+
+    $breakpoints: sm, md, lg, xl;
+    @each $breakpoint in $breakpoints {
+        // Generate numbered columns
+        @for $i from 1 through 12 {
+            .col-#{$breakpoint}-#{$i} {
+                @extend %base-col;
+                @include gt($breakpoint) {
+                    flex: 0 1 $ot * $i;
+                }
+            }
+
+            .col-#{$breakpoint}-offset-#{$i} {
+                @include gt($breakpoint) {
+                    margin-left: $ot * $i;
+                }
+            }
+        }
+        .col-#{$breakpoint}-offset-0 {
+            @include gt($breakpoint) {
+                margin-left: 0;
+            }
+        }
+    }
+}

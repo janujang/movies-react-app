@@ -1,0 +1,17 @@
+@import "./media-queries";
+@import "./variables";
+
+@mixin generate-tile-heights($sizes: $default-tile-heights){
+    height: map-get($sizes, xs);
+    @include gt(md) {
+        height: map-get($sizes, md);
+    }
+
+    @include gt(lg) {
+        height: map-get($sizes, lg);
+    }
+
+    @include gt(xl) {
+        height: map-get($sizes, xl);
+    }  
+}
