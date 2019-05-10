@@ -3,6 +3,7 @@ import Poster from './Poster/Poster';
 import classes from './Posters.module.css';
 import axios from 'axios';
 import Toolbar from '../Navigation/Toolbar/Toolbar';
+import {Atoms, Organisms, Molecules} from "@we.org/shared-component-library";
 
 class Posters extends Component  {
     state = {
@@ -37,12 +38,62 @@ class Posters extends Component  {
             //</Link>
         );
 
+        // const Link = () => null;
+        // const columns = (
+        // <Molecules.NavigationColumn key="Column 1" title="Column 1">
+        //     <Atoms.BaseLink external href="https://google.ca">Link 1</Atoms.BaseLink>
+        //     <Atoms.BaseLink external href="https://google.ca">Link 2</Atoms.BaseLink>
+        //     <Atoms.BaseLink external href="https://google.ca">Link 3</Atoms.BaseLink>
+        //     <Atoms.BaseLink external href="https://google.ca">Link 4</Atoms.BaseLink>
+        //     <Atoms.BaseLink external href="https://google.ca">Link 5</Atoms.BaseLink>
+        //     <Atoms.BaseLink external href="https://google.ca">Link 6</Atoms.BaseLink>
+        //     <Atoms.BaseLink external href="https://google.ca">Link 7</Atoms.BaseLink>
+        // </Molecules.NavigationColumn>,
+        // <Molecules.NavigationColumn key="Column 2" title="Column 2">
+        //     <Atoms.BaseLink external href="https://google.ca">Link 1</Atoms.BaseLink>
+        //     <Atoms.BaseLink external href="https://google.ca">Link 2</Atoms.BaseLink>
+        //     <Atoms.BaseLink external href="https://google.ca">Link 3</Atoms.BaseLink>
+        //     <Atoms.BaseLink external href="https://google.ca">Link 4</Atoms.BaseLink>
+        //     <Atoms.BaseLink external href="https://google.ca">Link 5</Atoms.BaseLink>
+        //     <Atoms.BaseLink external href="https://google.ca">Link 6</Atoms.BaseLink>
+        //     <Atoms.BaseLink external href="https://google.ca">Link 7</Atoms.BaseLink>
+        // </Molecules.NavigationColumn>
+        //);
         return(
             <div>
                 <Toolbar title='Popular Movies' back={false}/>
+                
+                {/* <Organisms.NavigationBar
+                    internalLinkComponent={Link}
+                    sectionsArray={[
+                    {
+                        title: "About WE",
+                        subMenuTitle: "Example Title",
+                        subMenuBodyText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+                        buttonText: "Button",
+                        buttonHref: "/",
+                    },
+                    {
+                        title: "Our Work",
+                        subMenuTitle: "Example Title",
+                        subMenuBodyText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+                        buttonHidden: true,
+                    
+                    },
+                    {
+                        title: "Get Involved with WE",
+                        subMenuTitle: "Example Title",
+                        subMenuBodyText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+                        buttonText: "Button",
+                        buttonHref: "https://google.ca",
+                        buttonIsExternal: true,
+                       
+                    }
+                    ]}
+                    />*/}
                 <div className={classes.Posters}>
                     {movies}
-                </div>
+                </div> 
                 
             </div>
         );

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import classes from './PosterInfo.module.css'
 import axios from 'axios';
 import Toolbar from '../Navigation/Toolbar/Toolbar';
-import {VideoPlayer} from "@we.org/shared-component-library";
+import {Atoms, Organisms, Molecules} from "@we.org/shared-component-library";
 
 
 class PosterInfo extends Component {
@@ -59,27 +59,34 @@ class PosterInfo extends Component {
                 <div className={classes.PosterInfo}>
                     <h1>{this.state.loadedMovie.title}</h1>   
 
+            
                     <div className={classes.Columns}>
                         <img 
                             className={classes.img} 
                             src={'http://image.tmdb.org/t/p/w342/' + this.state.loadedMovie.poster_path} 
                             alt={this.state.loadedMovie.title}/>
+
                         <div className={classes.TextContainer}>
                             <h2>{this.state.loadedMovie.release_date}</h2> 
                             <h3>{this.state.loadedMovie.runtime} mins</h3> 
                             <h3>{this.state.loadedMovie.vote_average + '/10'}</h3>
 
-
-                            <div className={classes.rating_bar}>
-                                <div  className={classes.rating} style={{width:'40%'}}/>
-                            </div>
-
-
                             <p>{this.state.loadedMovie.overview}</p> 
 
-                            <button>MARK AS FAVOURITE</button>
-                            <button>REVIEW</button>
-                            <button>SHARE</button>
+                            {/* <button className={classes.Buttons}>MARK AS FAVOURITE</button>
+                            <button className={classes.Buttons}>REVIEW</button>
+                            <button className={classes.Buttons}>SHARE</button> */}
+                            <div style={{display: 'inline-block'}}>
+                                <div style={{width: "20px"}} >
+                                    <Atoms.Button className={classes.Buttons} size="M" onClickHandler={() => alert('Marked as favourite')} >MARK AS FAVOURITE</Atoms.Button>
+                                </div>
+                                <div style={{width: '20px'}}  >
+                                    <Atoms.Button className={classes.Buttons} size="M" onClickHandler={() => alert('Reviewed')} >REVIEW</Atoms.Button>
+                                </div>
+                                <div style={{width: '20px'}}  >
+                                    <Atoms.Button className={classes.Buttons} size="M" onClickHandler={() => alert('Shared')} >SHARED</Atoms.Button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
@@ -88,14 +95,67 @@ class PosterInfo extends Component {
                         <h2>Trailers:</h2> 
                         <ul>
                             <li>Trailer 1</li>
-                            <VideoPlayer title="Logic" videoId="123123" />
-                            <li>Trailer 2</li>
+                            <Atoms.VideoPlayer title="Movie1" videoId="123123" />
                         </ul>
                         <hr/>
-                    </div>
-                    
 
-                    
+
+                        {/* Review */}
+                        <Organisms.TabSection
+                            tabs={[
+                                {
+                                    key: "Reviews",
+                                    text: "Reviews",
+                                    content: [
+                                        <Molecules.Accordion>
+                                            <Molecules.AccordionItem
+                                                title="Review 1"
+                                                id={1}
+                                                name="accordion">
+                                                Body text. Word limit: 250 words
+                                            </Molecules.AccordionItem>
+                                            <Molecules.AccordionItem
+                                                title="Review 2"
+                                                id={1}
+                                                name="accordion">
+                                                Body text. Word limit: 250 words
+                                            </Molecules.AccordionItem>
+                                            <Molecules.AccordionItem
+                                                title="Review 3"
+                                                id={1}
+                                                name="accordion">
+                                                Body text. Word limit: 250 words
+                                            </Molecules.AccordionItem>
+                                        </Molecules.Accordion>
+                                    ],
+                                },
+                                {
+                                    key: "Leave a review",
+                                    text: "Leave a review",
+                                    content: [
+                                        <div style={{ width: "600px", height: "300px" }}>
+                                            <Molecules.InputTextArea
+                                            name="text-area-input"
+                                            title="This is a title"
+                                            label="Labelled Text Area Input: Error"
+                                            placeholder="Enter text here"
+                                            />
+                                        </div>
+                                    ],
+                                },
+                                {
+                                    key: "Leave a rating",
+                                    text: "Leave a rating",
+                                    content: [
+                                        <Atoms.BodyText size="M">Select the number of stars you would like</Atoms.BodyText>
+                                    ],
+                                }
+                            ]}
+                        />
+                       
+                        
+                    </div>
+
                 </div>
    
             );

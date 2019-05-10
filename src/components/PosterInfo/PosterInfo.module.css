@@ -41,8 +41,8 @@
     font-size: 16px;
     padding: 20px 40px 20px 0px;
 }
-.PosterInfo button {
-    background-color: #009688;
+.Buttons {
+    background-color: #009688 !;
     border: none;
     color: white;
     outline: none;
@@ -54,7 +54,7 @@
     font-size: 15px;
 }
 
-.PosterInfo button:hover
+.Buttons:hover
 {
     background-color: #fa923f;
 }
