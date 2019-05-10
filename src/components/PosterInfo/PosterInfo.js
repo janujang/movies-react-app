@@ -12,7 +12,7 @@ class PosterInfo extends Component {
     componentDidMount(){
         console.log(this.props.match.params.id);
         if (this.props.match.params.id){
-            //new post
+            //new movie
             if (!this.state.loadedMovie || (this.state.loadedMovie && this.state.loadedMovie.id !== this.props.match.params.id)) {
                 axios.get('https://api.themoviedb.org/3/movie/' + this.props.match.params.id + '?api_key=0233eeb82ef3714df67f7e2db8e6ea28')
                 .then(response => {
@@ -67,16 +67,17 @@ class PosterInfo extends Component {
                             alt={this.state.loadedMovie.title}/>
 
                         <div className={classes.TextContainer}>
-                            <h2>{this.state.loadedMovie.release_date}</h2> 
+                            <h2>{this.state.loadedMovie.release_date.substring(0,4)}</h2> 
                             <h3>{this.state.loadedMovie.runtime} mins</h3> 
                             <h3>{this.state.loadedMovie.vote_average + '/10'}</h3>
 
                             <p>{this.state.loadedMovie.overview}</p> 
 
-                            {/* <button className={classes.Buttons}>MARK AS FAVOURITE</button>
+                            <button className={classes.Buttons}>MARK AS FAVOURITE</button>
                             <button className={classes.Buttons}>REVIEW</button>
-                            <button className={classes.Buttons}>SHARE</button> */}
-                            <div style={{display: 'inline-block'}}>
+                            <button className={classes.Buttons}>SHARE</button>
+
+                            {/* <div style={{display: 'inline-block'}}>
                                 <div style={{width: "20px"}} >
                                     <Atoms.Button className={classes.Buttons} size="M" onClickHandler={() => alert('Marked as favourite')} >MARK AS FAVOURITE</Atoms.Button>
                                 </div>
@@ -86,7 +87,7 @@ class PosterInfo extends Component {
                                 <div style={{width: '20px'}}  >
                                     <Atoms.Button className={classes.Buttons} size="M" onClickHandler={() => alert('Shared')} >SHARED</Atoms.Button>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     

@@ -3,24 +3,41 @@ import Poster from './Poster/Poster';
 import classes from './Posters.module.css';
 import axios from 'axios';
 import Toolbar from '../Navigation/Toolbar/Toolbar';
-import {Atoms, Organisms, Molecules} from "@we.org/shared-component-library";
+//import {Atoms, Organisms, Molecules} from "@we.org/shared-component-library";
 
 class Posters extends Component  {
     state = {
         movies: [],
-        selectedId: null
+        selectedId: null,
+        category: ''
     }
 
     componentDidMount(){
+        axios.get('http://api.themoviedb.org/3/movie/' + 'popular' +'?api_key=0233eeb82ef3714df67f7e2db8e6ea28')
+                .then(response => {
+                    this.setState({movies: response.data.results, category: 'popular'});
+                    //console.log(response)
+                });
+    }
+    
+    componentDidUpdate(){
         console.log(this.props.match.params);
         //console.log(this.props);
-        axios.get('http://api.themoviedb.org/3/movie/popular?api_key=0233eeb82ef3714df67f7e2db8e6ea28')
-        .then(response => {
-            this.setState({movies: response.data.results});
-            //console.log(response)
-        });
+        //axios.get('http://api.themoviedb.org/3/movie/popular?api_key=0233eeb82ef3714df67f7e2db8e6ea28')
+
+        // if (this.props.match.params.category){
+            //new movie
+            if (!this.state.category || this.state.category !== this.props.match.params.category) {
+                axios.get('http://api.themoviedb.org/3/movie/' + this.props.match.params.category +'?api_key=0233eeb82ef3714df67f7e2db8e6ea28')
+                .then(response => {
+                    this.setState({movies: response.data.results, category: this.props.match.params.category});
+                    //console.log(response)
+                });
+            }
+
     }
 
+    
     movieSelectedHandler = (id) => {
         //console.log(id);
         //this.setState({selectedId: id});
@@ -59,9 +76,10 @@ class Posters extends Component  {
         //     <Atoms.BaseLink external href="https://google.ca">Link 7</Atoms.BaseLink>
         // </Molecules.NavigationColumn>
         //);
+        
         return(
             <div>
-                <Toolbar title='Popular Movies' back={false}/>
+                <Toolbar title={this.state.category.toUpperCase()} back={false}/>
                 
                 {/* <Organisms.NavigationBar
                     internalLinkComponent={Link}

@@ -7,10 +7,13 @@
     padding-top: 90px;
     height: 100vh;
     width: 100%;
+    
 }
 .Columns{
     padding-top: 100px;
     column-count: 2;
+    display: flex;
+    flex-direction: row;
 }
 .TextContainer{
     text-align: left;
@@ -42,7 +45,7 @@
     padding: 20px 40px 20px 0px;
 }
 .Buttons {
-    background-color: #009688 !;
+    background-color: #009688;
     border: none;
     color: white;
     outline: none;

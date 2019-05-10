@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Toolbar.module.css';
 import {Link} from 'react-router-dom';
-import { Dropdown } from 'react-bootstrap';
+//import { Dropdown } from 'react-bootstrap';
 
 
 const toolbar = props => {
@@ -12,9 +12,9 @@ const toolbar = props => {
             <strong>{props.title}</strong> 
             <nav>
                     <ul>
-                        <li><Link to='/' exact>Popular</Link></li>
-                        <li><Link to='/toprated' exact>Top Rated</Link></li>
-                        <li><Link to='/nowplaying' exact>Now Playing</Link></li>
+                        <li><Link to='/popular' exact>Popular</Link></li>
+                        <li><Link to='/top_rated' exact>Top Rated</Link></li>
+                        <li><Link to='/now_playing' exact>Now Playing</Link></li>
                     </ul>
                 </nav>
         </div>
@@ -29,7 +29,7 @@ const toolbar = props => {
 
                 <nav>
                     <ul>
-                        <li><Link to='/' exact>Back</Link></li>
+                        <li><Link to='/popular' exact>Back</Link></li>
                     </ul>
                 </nav>
                 
