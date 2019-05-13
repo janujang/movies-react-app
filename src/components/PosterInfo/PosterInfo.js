@@ -56,6 +56,16 @@ class PosterInfo extends Component {
         const { loadedMovie } = this.state
         if (loadedMovie) {
             content = (
+                <div>
+                {/* <Atoms.Container>
+                        <Atoms.Col md={{span: 6}} > 
+                            <div style={{backgroundColor: "red", height: "50px", marginTop: "100px"}}> 6 </div>
+                        </Atoms.Col>
+                        <Atoms.Col md={{span: 6}} > 
+                            <div style={{backgroundColor: "blue", height: "50px", marginTop: "100px"}}> 6 </div>
+                        </Atoms.Col>
+                </Atoms.Container> */}
+                
                 <div className={classes.PosterInfo}>
                     <h1>{this.state.loadedMovie.title}</h1>   
 
@@ -67,6 +77,7 @@ class PosterInfo extends Component {
                             alt={this.state.loadedMovie.title}/>
 
                         <div className={classes.TextContainer}>
+
                             <h2>{this.state.loadedMovie.release_date.substring(0,4)}</h2> 
                             <h3>{this.state.loadedMovie.runtime} mins</h3> 
                             <h3>{this.state.loadedMovie.vote_average + '/10'}</h3>
@@ -158,6 +169,7 @@ class PosterInfo extends Component {
                     </div>
 
                 </div>
+            </div>
    
             );
         }
