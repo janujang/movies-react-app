@@ -17,7 +17,7 @@ class Layout extends Component {
                    
                     {/* <Route path="/" exact component={Posters}/> */}
                     <Route path="/:category" exact component={Posters}/>
-                    <Route path="/" exact component={Posters}/>
+                    <Route path="/popular" exact component={Posters}/>
 
                     {/* <Route path="/nowplaying" exact component={Posters}/>
                     <Route path="/toprated" exact component={Posters}/> */}

@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './Toolbar.module.css';
-import {Link} from 'react-router-dom';
+import {NavLink, Link} from 'react-router-dom';
 //import { Dropdown } from 'react-bootstrap';
 
 
@@ -12,11 +12,11 @@ const toolbar = props => {
             <strong>{props.title}</strong> 
             <nav>
                     <ul>
-                        <li><Link to='/popular' exact>Popular</Link></li>
-                        <li><Link to='/top_rated' exact>Top Rated</Link></li>
-                        <li><Link to='/now_playing' exact>Now Playing</Link></li>
+                        <li><NavLink to='/popular' exact activeStyle={{color: 'red'}}>Popular</NavLink></li>
+                        <li><NavLink to='/top_rated' exact activeStyle={{color: 'red'}}>Top Rated</NavLink></li>
+                        <li><NavLink to='/now_playing' exact activeStyle={{color: 'red'}}>Now Playing</NavLink></li>
                     </ul>
-                </nav>
+            </nav>
         </div>
         
         

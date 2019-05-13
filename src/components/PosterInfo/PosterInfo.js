@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import classes from './PosterInfo.module.css'
 import axios from 'axios';
 import Toolbar from '../Navigation/Toolbar/Toolbar';
-import {Atoms, Organisms, Molecules} from "@we.org/shared-component-library";
+import {Atoms, Organisms, Molecules, Form, InputDropdown} from "@we.org/shared-component-library";
 
 
 class PosterInfo extends Component {
@@ -164,10 +164,21 @@ class PosterInfo extends Component {
                                 }
                             ]}
                         />
-                       
+                        <InputDropdown
+                            options={[
+                                { value: 1, label: "one" },
+                                { value: 2, label: "two" },
+                                { value: 3, label: "three" },
+                            ]}
+                            name="foo"
+                            value={2}
+                            onChangeHandler={() => alert("hi")}/>
+
+                        
                         
                     </div>
-
+                    
+                    
                 </div>
             </div>
    
