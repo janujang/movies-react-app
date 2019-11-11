@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@babel/runtime": "^7.4.4",
-    "@we.org/shared-component-library": "^2.2.0",
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
     "node-sass": "^4.12.0",

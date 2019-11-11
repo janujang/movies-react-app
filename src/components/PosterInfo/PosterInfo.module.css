@@ -1,108 +1,106 @@
-.PosterInfo{
-    background-color:white;
-    font-size: 10px;
-    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-    padding-top: 90px;
-    height: 100vh;
-    /*width: 100%;*/
-    
+.PosterInfo {
+  background-color: white;
+  font-size: 10px;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  padding-top: 90px;
+  height: 100vh;
+  /*width: 100%;*/
 }
-.Columns{
-    padding-top: 100px;
-    column-count: 2;
-    display: flex;
-    flex-direction: row;
+.Columns {
+  padding-top: 100px;
+  column-count: 2;
+  display: flex;
+  flex-direction: row;
 }
-.TextContainer{
-    text-align: left;
-    padding: 20px 20px;
-    color: #747474;
+.TextContainer {
+  text-align: left;
+  padding: 20px 20px;
+  color: #747474;
 }
 .PosterInfo h1 {
-    position: fixed;
-    padding: 30px 0;
-    width: 100%;
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5);
-    background-color: #009688
+  position: fixed;
+  padding: 30px 0;
+  width: 100%;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5);
+  background-color: #009688;
 }
 .PosterInfo h2 {
-    font-size: 25px;
+  font-size: 25px;
 }
 .PosterInfo h3 {
-    font-size: 20px;
-    color: black;
+  font-size: 20px;
+  color: black;
 }
 
 .PosterInfo img {
-    margin: 40px 40px;
+  margin: 40px 40px;
 }
 
-.PosterInfo p{
-    text-align: justify;
-    font-size: 16px;
-    padding: 20px 40px 20px 0px;
+.PosterInfo p {
+  text-align: justify;
+  font-size: 16px;
+  padding: 20px 40px 20px 0px;
 }
 .Buttons {
-    background-color: #009688;
-    border: none;
-    color: white;
-    outline: none;
-    cursor: pointer;
-    font: inherit;
-    padding: 20px;
-    margin: 20px 20px 20px 0px;
-    font-weight: bold;
-    font-size: 15px;
+  background-color: #009688;
+  border: none;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  padding: 20px;
+  margin: 20px 20px 20px 0px;
+  font-weight: bold;
+  font-size: 15px;
 }
 
-.Buttons:hover
-{
-    background-color: #fa923f;
+.Buttons:hover {
+  background-color: #fa923f;
 }
-.Trailer{
-    text-align: left;
-    padding: 0px 150px;
+.Trailer {
+  text-align: left;
+  padding: 0px 150px;
 }
 
 .Trailer ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    text-align: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: left;
 }
 
 .Trailer li {
-    margin: 20px;
-    font-size: 16px;
+  margin: 20px;
+  font-size: 16px;
 }
 
 .rating_bar {
-    /*this class creats 5 stars bar with empty stars */
-    /*each star is 16 px, it means 5 stars will make 80px together */
-    width: 80px;
-    /*height of empty star*/
-    height: 16px;
-    /*background image with stars */
-    background: url(../../assets/images/stars.png);
-    /*which will be repeated horizontally */
-    background-repeat: repeat-x;
-    /* as we are using sprite image, we need to position it to use right star, 
+  /*this class creats 5 stars bar with empty stars */
+  /*each star is 16 px, it means 5 stars will make 80px together */
+  width: 80px;
+  /*height of empty star*/
+  height: 16px;
+  /*background image with stars */
+  background: url(../../assets/images/stars.png);
+  /*which will be repeated horizontally */
+  background-repeat: repeat-x;
+  /* as we are using sprite image, we need to position it to use right star, 
     //0 0 is for empty */
-    background-position: 0 0;
-    /* align inner div to the left */
-    text-align: left;
+  background-position: 0 0;
+  /* align inner div to the left */
+  text-align: left;
 }
 .rating {
-    /* height of full star is the same, we won't specify width here */
-    height: 16px;
-    /* background image with stars */
-    background: url(../../assets/images/stars.png);
-    /* now we will position background image to use 16px from top, 
+  /* height of full star is the same, we won't specify width here */
+  height: 16px;
+  /* background image with stars */
+  background: url(../../assets/images/stars.png);
+  /* now we will position background image to use 16px from top, 
     //which means use full stars */
-    background-position: 0 -16px;
-    /* and repeat them horizontally */
-    background-repeat: repeat-x;
+  background-position: 0 -16px;
+  /* and repeat them horizontally */
+  background-repeat: repeat-x;
 }
