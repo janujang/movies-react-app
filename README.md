@@ -1,4 +1,3 @@
-React app that uses the MovieDB API to display grid of movies based on categories such as popularity, ratings, etc. 
 
 ## Available Scripts
 
