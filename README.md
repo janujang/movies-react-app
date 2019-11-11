@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React app that uses the MovieDB API to display grid of movies based on categories such as popularity, ratings, etc. 
 
 ## Available Scripts
 
