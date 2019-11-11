@@ -1,5 +1,7 @@
-## Screenshot
+## Screenshots
 ![](Screenshot.png)
+![](Screenshot2.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
