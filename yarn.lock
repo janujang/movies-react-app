@@ -1344,11 +1344,6 @@
     lodash.unescape "4.0.1"
     semver "5.5.0"
 
-"@we.org/shared-component-library@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@we.org/shared-component-library/-/shared-component-library-2.2.0.tgz#d3e89bc8e349b7c18c8491010b6d05334ac372f7"
-  integrity sha512-WUSQ0Rt+Yg1YIVgbWL/QPwo+bH2yJ+cyeEjd/5zFY5AGUTDL3C+Gliey/tcg9om5jQ2vEvYVDyBUIm82/gQwVA==
-
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.8.5.tgz#51b1c5fe6576a34953bf4b253df9f0d490d9e359"
@@ -10915,9 +10910,9 @@ xtend@^4.0.0, xtend@^4.0.1, xtend@~4.0.1:
   integrity sha1-pcbVMr5lbiPbgg77lDofBJmNY68=
 
 y18n@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
-  integrity sha1-bRX7qITAhnnA136I53WegR4H+kE=
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.2.tgz#85c901bd6470ce71fc4bb723ad209b70f7f28696"
+  integrity sha512-uGZHXkHnhF0XeeAPgnKfPv1bgKAYyVvmNL1xlKsPYZPaIHxGti2hHqvOCQv71XMsLxu1QjergkqogUnms5D3YQ==
 
 "y18n@^3.2.1 || ^4.0.0", y18n@^4.0.0:
   version "4.0.0"
