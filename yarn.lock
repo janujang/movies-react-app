@@ -1344,11 +1344,6 @@
     lodash.unescape "4.0.1"
     semver "5.5.0"
 
-"@we.org/shared-component-library@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@we.org/shared-component-library/-/shared-component-library-2.2.0.tgz#d3e89bc8e349b7c18c8491010b6d05334ac372f7"
-  integrity sha512-WUSQ0Rt+Yg1YIVgbWL/QPwo+bH2yJ+cyeEjd/5zFY5AGUTDL3C+Gliey/tcg9om5jQ2vEvYVDyBUIm82/gQwVA==
-
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.8.5.tgz#51b1c5fe6576a34953bf4b253df9f0d490d9e359"
@@ -10083,9 +10078,9 @@ typedarray@^0.0.6:
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
 ua-parser-js@^0.7.18:
-  version "0.7.19"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.19.tgz#94151be4c0a7fb1d001af7022fdaca4642659e4b"
-  integrity sha512-T3PVJ6uz8i0HzPxOF9SWzWAlfN/DavlpQqepn22xgve/5QecC+XMCAtmUNnY7C9StehaV6exjUCI801lOI7QlQ==
+  version "0.7.28"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
+  integrity sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
 
 uglify-js@3.4.x:
   version "3.4.10"
