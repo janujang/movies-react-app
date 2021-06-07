@@ -1344,11 +1344,6 @@
     lodash.unescape "4.0.1"
     semver "5.5.0"
 
-"@we.org/shared-component-library@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@we.org/shared-component-library/-/shared-component-library-2.2.0.tgz#d3e89bc8e349b7c18c8491010b6d05334ac372f7"
-  integrity sha512-WUSQ0Rt+Yg1YIVgbWL/QPwo+bH2yJ+cyeEjd/5zFY5AGUTDL3C+Gliey/tcg9om5jQ2vEvYVDyBUIm82/gQwVA==
-
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.8.5.tgz#51b1c5fe6576a34953bf4b253df9f0d490d9e359"
@@ -6401,9 +6396,9 @@ meow@^3.7.0:
     trim-newlines "^1.0.0"
 
 merge-deep@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/merge-deep/-/merge-deep-3.0.2.tgz#f39fa100a4f1bd34ff29f7d2bf4508fbb8d83ad2"
-  integrity sha512-T7qC8kg4Zoti1cFd8Cr0M+qaZfOwjlPDEdZIIPPB2JZctjaPM4fX+i7HOId69tAti2fvO6X5ldfYUONDODsrkA==
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/merge-deep/-/merge-deep-3.0.3.tgz#1a2b2ae926da8b2ae93a0ac15d90cd1922766003"
+  integrity sha512-qtmzAS6t6grwEkNrunqTBdn0qKwFgNWvlxUbAV8es9M7Ot1EbyApytCnvE0jALPa46ZpKDUo527kKiaWplmlFA==
   dependencies:
     arr-union "^3.1.0"
     clone-deep "^0.2.4"
