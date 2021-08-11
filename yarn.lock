@@ -1344,11 +1344,6 @@
     lodash.unescape "4.0.1"
     semver "5.5.0"
 
-"@we.org/shared-component-library@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@we.org/shared-component-library/-/shared-component-library-2.2.0.tgz#d3e89bc8e349b7c18c8491010b6d05334ac372f7"
-  integrity sha512-WUSQ0Rt+Yg1YIVgbWL/QPwo+bH2yJ+cyeEjd/5zFY5AGUTDL3C+Gliey/tcg9om5jQ2vEvYVDyBUIm82/gQwVA==
-
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.8.5.tgz#51b1c5fe6576a34953bf4b253df9f0d490d9e359"
@@ -7309,9 +7304,9 @@ path-key@^2.0.0, path-key@^2.0.1:
   integrity sha1-QRyttXTFoUDTpLGRDUDYDMn0C0A=
 
 path-parse@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
-  integrity sha512-GSmOT2EbHrINBf9SR7CDELwlJ8AENk3Qn7OikK4nFYAu3Ote2+JYNVvkpAEQm3/TLNEJFD/xZJjzyxg3KBWOzw==
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.7.tgz#fbc114b60ca42b30d9daf5858e4bd68bbedb6735"
+  integrity sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==
 
 path-to-regexp@0.1.7:
   version "0.1.7"
